@@ -1,0 +1,52 @@
+p {
+	font-size: large;
+	color: black;
+}
+
+h3 {
+	font-size: medium;
+	color: gray;
+	display: inline;
+}
+
+b {
+	color: red;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+body {
+	margin-left: 20%;
+	margin-top: 6%;
+	margin-right: 5%;
+	position: relative;
+	visibility: visible;
+	bottom: 5%;
+	top: 5%;
+	font-family: Garamond, Corbel, Verdana;
+	font-size: large;
+}
+
+a {
+	text-decoration: none;
+	color: gray;
+	font-size: large;
+}
+
+img {
+	border: none;
+}
+
+textarea {
+	font-family: Corbel;
+}
+
+.hidden {
+	display: none;
+}
+
+.unhidden {
+	display: text;
+}
