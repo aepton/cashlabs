@@ -18,3 +18,12 @@ TEMPLATE_PATH = 'templates/'
 class MainPage(webapp.RequestHandler):
   def get(self):	
 	  self.response.out.write(utils.read_template(TEMPLATE_PATH, 'home.html'))
+
+class Distribute(webapp.RequestHandler):
+  def get(self):	
+	  self.response.out.write(utils.read_template(TEMPLATE_PATH,
+	                                              'distribute.html'))
+	  
+class Resize(webapp.RequestHandler):
+  def get(self):	
+	  self.response.out.write(utils.read_template(TEMPLATE_PATH, 'resize.html'))

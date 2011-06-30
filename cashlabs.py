@@ -14,7 +14,10 @@ from google.appengine.api import users
 	
 def main():
   application = webapp.WSGIApplication(
-      [('/', home.MainPage),],
+      [('/', home.MainPage),
+       ('/distribute', home.Distribute),
+       ('/resize', home.Resize)
+      ],
       debug=False)
   wsgiref.handlers.CGIHandler().run(application)
 
