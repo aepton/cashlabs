@@ -18,7 +18,6 @@ table {
 }
 
 body {
-	margin-left: 20%;
 	margin-top: 6%;
 	margin-right: 5%;
 	position: relative;
@@ -49,4 +48,41 @@ textarea {
 
 .unhidden {
 	display: text;
+}
+
+#holder {
+  margin-left: 20%;
+  height: 400px;
+  width: 400px;
+}
+
+#dataTable {
+  margin-left: 20%;
+  float: left;
+  width: 50%;
+}
+
+.dataName {
+  color: black;
+}
+
+.dataAmount {
+  color: red;
+}
+
+.dataHeader {
+  color: gray;
+}
+
+#notes {
+  margin-top: 2%;
+  float: left;
+  width: 100%;
+  font-size: small;
+  color: gray;
+}
+
+#footer {
+  float: left;
+  margin-top: 2%;
 }

@@ -4,22 +4,47 @@
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>Resizing Demos</title>
+	<title>Resizing the Pie</title>
 	<meta name="author" content="Abe Epton">
-	<link rel="stylesheet" href="stylesheets/main.css" TYPE="text/css">
+	<link rel="stylesheet" href="stylesheets/main.css">
 	<script src="js/raphael.js"></script>
-	<script type="text/javascript" src="js/resize.js"></script>
-	<style media="screen"> 
-            #holder {
-                height: 400px;
-                width: 400px;
-            }
-  </style>
+	<script src="js/shared.js"></script>
+	<script src="js/resize.js"></script>
 </head>
 <body>
-<p><b>Resizing demos</b></p>
-<p>This is using Dmitry Baranovskiy's <a href="http://raphaeljs.com/">Raphaël</a> library</a> and is indebted to <a href="http://raphaeljs.com/growing-pie.html">this demo</a></p>
-<br><br>
 <div id="holder"></div>
+<div id="dataTable">
+	<table>
+		<th>
+			<tr>
+				<td class="dataHeader">Category</td>
+				<td class="dataHeader">Amount</td>
+			</tr>
+		</th>
+		<tr style="background: #616536">
+			<td id="dd_cat" class="dataName"></td>
+			<td id="dd_amt" class="dataAmount"></td>
+		</tr>
+		<tr style="background: #A4E666">
+			<td id="ndd_cat" class="dataName"></td>
+			<td id="ndd_amt" class="dataAmount"></td>
+		</tr>
+		<tr style="background: #31B96E">
+			<td id="m_cat" class="dataName"></td>
+			<td id="m_amt" class="dataAmount"><td>
+		</tr>
+	</table>
+</div>
+<div id="notes">
+	Notes:
+	* Instead of using discretionary/mandatory, break out discretionary by category
+	* Clicking on table should increase size of corresponding pie slice
+	* Hovering on table should display corresponding label?
+	* More than 3 categories?
+</div>
+<div id="footer">
+	This is using Dmitry Baranovskiy's <a href="http://raphaeljs.com/">Raphaël</a> library
+	and is indebted to <a href="http://raphaeljs.com/growing-pie.html">this demo</a>.
+</div>
 </body>
 </html>
