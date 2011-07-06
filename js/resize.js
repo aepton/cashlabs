@@ -3,35 +3,52 @@ window.onload = function () {
   
   var budgetAreas = [ // Need better source: http://useconomy.about.com/od/usfederalbudget/p/Discretionary.htm
                       // Total: $0.815T
-                     {name: "Defense Discretionary",
-                      id: "dd",
-                      color: {'h': 65, 's': 46.5, 'v': 39.6},
+                     {color: {'h': 201, 's': 36.1, 'v': 91.4},
+                      textColor: "black",
                       spendingScaled: 0.815},
                       
                       // Need better source: http://useconomy.about.com/od/usfederalbudget/p/Discretionary.htm
                       // Total: $0.491T
-                     {name: "Non-defense Discretionary",
-                      id: "ndd",
-                      color: {'h': 91, 's': 55.7, 'v': 90.2},
+                     {color: {'h': 200, 's': 98.1, 'v': 41.2},
+                      textColor: "white",
                       spendingScaled: 0.491},
                       
                       // Mandatory and interest payments for FY 10, p. 468 of FY 12 budget: 
                       // http://www.whitehouse.gov/omb/budget/Analytical_Perspectives
                       // Mandatory: $1.913T Interest: $2.109T Total: $4.022T
-                     {name: "Mandatory",
-                      id: "m",
-                      color: {'h': 147, 's': 73.5, 'v': 72.5},
-                      spendingScaled: 4.022}];
+                     {color: {'h': 84, 's': 45.6, 'v': 84.3},
+                      textColor: "black",
+                      spendingScaled: 4.022},
+                     
+                     // Need better source: http://useconomy.about.com/od/usfederalbudget/p/Discretionary.htm
+                     // Total: $0.815T
+                     {color: {'h': 90, 's': 100, 'v': 34.1},
+                      textColor: "white",
+                      spendingScaled: 0.815},
+                      
+                      // Need better source: http://useconomy.about.com/od/usfederalbudget/p/Discretionary.htm
+                      // Total: $0.491T
+                     {color: {'h': 45, 's': 49.4, 'v': 93.7},
+                      textColor: "black",
+                      spendingScaled: 0.491},
+                      
+                      // Mandatory and interest payments for FY 10, p. 468 of FY 12 budget: 
+                      // http://www.whitehouse.gov/omb/budget/Analytical_Perspectives
+                      // Mandatory: $1.913T Interest: $2.109T Total: $4.022T
+                     {color: {'h': 19, 's': 42.8, 'v': 87.1},
+                      textColor: "white",
+                      spendingScaled: 4.022},
+                     ];
                       
   var budgetScaler = 1000000000000; // Use to translate into trillions
-  var totalBudget = 5.328; // Use to set "target" budget amount
+  var totalBudget = 10.656; // Use to set "target" budget amount
   
   function displayBudgetAreas(budget) {
     for (var i = 0; i < budget.length; i++) {
-      var cat = document.getElementById(budget[i].id + "_cat");
-      var amt = document.getElementById(budget[i].id + "_amt");
-      cat.innerHTML = budget[i].name;
-      amt.innerHTML = prettifyNumber(((budget[i].spendingScaled / total) * totalBudget) * budgetScaler, 'B');
+      var amt = document.getElementById(i + ".user.amt");
+      var intro = '<div class="result_' + budget[i].textColor + '">';
+      var closing = '</div>';
+      amt.innerHTML =  intro + prettifyNumber(((budget[i].spendingScaled / total) * totalBudget) * budgetScaler, 'B') + closing;
     }
   }
   

@@ -51,26 +51,64 @@ textarea {
 }
 
 #holder {
-  margin-left: 20%;
+  margin-left: 10%;
   height: 400px;
   width: 400px;
+  display: inline-table;
 }
 
 #dataTable {
-  margin-left: 20%;
-  float: left;
   width: 50%;
+  float: right;
+  display: inline;
 }
 
 .dataName {
   color: black;
+  font-size: small;
 }
 
 .dataAmount {
-  color: red;
+  font-size: small;
+}
+
+.result_white {
+  color: white;
+}
+
+.result_black {
+  color: black;
+}
+
+.headerName {
+  color: black;
+  font-size: small;
+}
+
+.headerAmount {
+  color: black;
+  font-size: small;
 }
 
 .dataHeader {
+  color: gray;
+  font-size: small;
+}
+
+.comparisonHeaderName {
+  color: gray;
+  font-size: small;
+}
+
+.comparisonAmount {
+  color: gray;
+  font-size: small;
+}
+
+#intro {
+  float: left;
+  width: 100%;
+  font-size: small;
   color: gray;
 }
 
